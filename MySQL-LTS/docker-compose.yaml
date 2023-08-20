@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  pterodactyl:
+    image: ubuntu:lunar
+    build: ./pterodactyl

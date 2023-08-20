@@ -1,0 +1,41 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-06-28T02:59:54+05:30",
+    "name": "Unity 2021 Egg",
+    "author": "docker@therealm18studios.com",
+    "description": "Just a normal pterodactyl egg to run Unity 2021 apps",
+    "features": null,
+    "images": [
+        "docker.io\/ubuntu\/jammy"
+    ],
+    "file_denylist": [],
+    "startup": "./ ${STARTUP_PARAM}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Started\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho \"Hello\"",
+            "container": "ubuntu:jammy",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup Param",
+            "description": "",
+            "env_variable": "STARTUP_PARAM",
+            "default_value": "run",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:200"
+        }
+    ]
+}

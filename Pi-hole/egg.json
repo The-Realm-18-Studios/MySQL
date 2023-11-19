@@ -1,0 +1,72 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-11-19T10:11:06+00:00",
+    "name": "Pi-hole",
+    "author": "t@t.com",
+    "description": null,
+    "features": null,
+    "docker_images": {
+        "docker.io\/therealm18studios\/pi-hole:latest": "docker.io\/therealm18studios\/pi-hole:latest"
+    },
+    "file_denylist": [],
+    "startup": "\/s6-init",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Started\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Timezone",
+            "description": "",
+            "env_variable": "TZ",
+            "default_value": "America\/Chicago",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "DNS1",
+            "description": "",
+            "env_variable": "DNS1",
+            "default_value": "1.1.1.1",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "DNS2",
+            "description": "",
+            "env_variable": "DNS2",
+            "default_value": "8.8.8.8",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Server IP",
+            "description": "",
+            "env_variable": "ServerIP",
+            "default_value": "127.0.0.1",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        }
+    ]
+}
